@@ -13,6 +13,7 @@ from flask import Flask
 server = Flask(__name__) # define flask app.server
 
 app = dash.Dash(__name__, server=server) # call flask server
+app.title = "example service"
 # gunicorn app.graph:app.server -b :8000
 
 # ---------- Import and clean data (importing csv into pandas)
